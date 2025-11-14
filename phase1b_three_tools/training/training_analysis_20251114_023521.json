@@ -1,0 +1,496 @@
+{
+  "training_results": {
+    "dataset_name": "Training Set (80 scenarios)",
+    "scenarios_file": "../data/phase1b_train_80_augmented.json",
+    "n_episodes": 50,
+    "statistics": {
+      "mean_reward": 3784.56005859375,
+      "std_reward": 2130.59619140625,
+      "median_reward": 3015.5,
+      "min_reward": 1326.0,
+      "max_reward": 8940.0
+    },
+    "behavioral": {
+      "mean_episode_length": 3.0,
+      "nmap_usage_pct": 33.33333333333333,
+      "action_distribution": {
+        "0": 0,
+        "1": 0,
+        "2": 50,
+        "3": 0,
+        "4": 0,
+        "5": 50,
+        "6": 0,
+        "7": 0,
+        "8": 50
+      }
+    },
+    "scenario_stats": {
+      "phase1b_admin_infra": {
+        "mean": 2067.0,
+        "std": 0.0,
+        "count": 1
+      },
+      "phase1b_admin_infra_variant_01": {
+        "mean": 3267.0,
+        "std": 0.0,
+        "count": 3
+      },
+      "phase1b_cdn_ecommerce": {
+        "mean": 1506.0,
+        "std": 0.0,
+        "count": 2
+      },
+      "phase1b_web_mail_variant_03": {
+        "mean": 3527.0,
+        "std": 0.0,
+        "count": 1
+      },
+      "phase1b_web_mail": {
+        "mean": 3483.0,
+        "std": 0.0,
+        "count": 2
+      },
+      "phase1b_cdn_ecommerce_variant_01": {
+        "mean": 1326.0,
+        "std": 0.0,
+        "count": 1
+      },
+      "phase1b_full_stack_variant_02": {
+        "mean": 8929.25,
+        "std": 18.61954689025879,
+        "count": 4
+      },
+      "phase1b_web_database_variant_01": {
+        "mean": 2744.0,
+        "std": 0.0,
+        "count": 1
+      },
+      "phase1b_ssh_infra_variant_01": {
+        "mean": 3985.0,
+        "std": 0.0,
+        "count": 1
+      },
+      "phase1b_web_database_variant_03": {
+        "mean": 3966.0,
+        "std": 0.0,
+        "count": 2
+      },
+      "phase1b_dev_infra_variant_01": {
+        "mean": 4148.0,
+        "std": 0.0,
+        "count": 1
+      },
+      "phase1b_web_database_variant_02": {
+        "mean": 4220.0,
+        "std": 0.0,
+        "count": 1
+      },
+      "phase1b_web_monitoring_variant_01": {
+        "mean": 1823.0,
+        "std": 0.0,
+        "count": 2
+      },
+      "phase1b_monitoring_variant_02": {
+        "mean": 3926.0,
+        "std": 0.0,
+        "count": 2
+      },
+      "phase1b_web_admin": {
+        "mean": 2408.0,
+        "std": 0.0,
+        "count": 1
+      },
+      "phase1b_enterprise_windows_variant_01": {
+        "mean": 6733.0,
+        "std": 0.0,
+        "count": 1
+      },
+      "phase1b_web_mail_variant_01": {
+        "mean": 2283.0,
+        "std": 0.0,
+        "count": 1
+      },
+      "phase1b_web_backends_variant_02": {
+        "mean": 2476.0,
+        "std": 0.0,
+        "count": 1
+      },
+      "phase1b_dev_infra_variant_03": {
+        "mean": 7048.0,
+        "std": 0.0,
+        "count": 1
+      },
+      "phase1b_monitoring": {
+        "mean": 3745.0,
+        "std": 0.0,
+        "count": 1
+      },
+      "phase1b_database_cluster_variant_02": {
+        "mean": 7978.0,
+        "std": 0.0,
+        "count": 1
+      },
+      "phase1b_web_monitoring": {
+        "mean": 1823.0,
+        "std": 0.0,
+        "count": 2
+      },
+      "phase1b_api_gateway": {
+        "mean": 3008.0,
+        "std": 0.0,
+        "count": 1
+      },
+      "phase1b_web_backends_variant_01": {
+        "mean": 2347.0,
+        "std": 0.0,
+        "count": 1
+      },
+      "phase1b_load_balanced_variant_02": {
+        "mean": 2571.0,
+        "std": 0.0,
+        "count": 1
+      },
+      "phase1b_ssh_infra_variant_03": {
+        "mean": 7225.0,
+        "std": 0.0,
+        "count": 1
+      },
+      "phase1b_mail_server_variant_02": {
+        "mean": 2582.0,
+        "std": 0.0,
+        "count": 2
+      },
+      "phase1b_web_backends": {
+        "mean": 2347.0,
+        "std": 0.0,
+        "count": 1
+      },
+      "phase1b_dev_web_variant_02": {
+        "mean": 2078.0,
+        "std": 0.0,
+        "count": 1
+      },
+      "phase1b_dev_web": {
+        "mean": 2164.0,
+        "std": 0.0,
+        "count": 1
+      },
+      "phase1b_mail_server": {
+        "mean": 2858.0,
+        "std": 0.0,
+        "count": 1
+      },
+      "phase1b_api_gateway_variant_03": {
+        "mean": 3008.0,
+        "std": 0.0,
+        "count": 1
+      },
+      "phase1b_web_redis_variant_03": {
+        "mean": 2822.0,
+        "std": 0.0,
+        "count": 1
+      },
+      "phase1b_mail_server_variant_01": {
+        "mean": 5938.0,
+        "std": 0.0,
+        "count": 2
+      },
+      "phase1b_mail_server_variant_03": {
+        "mean": 2858.0,
+        "std": 0.0,
+        "count": 1
+      },
+      "phase1b_web_ssh": {
+        "mean": 3023.0,
+        "std": 0.0,
+        "count": 1
+      },
+      "phase1b_admin_infra_variant_02": {
+        "mean": 2619.0,
+        "std": 0.0,
+        "count": 1
+      }
+    },
+    "all_rewards": [
+      2067.0,
+      3267.0,
+      1506.0,
+      3527.0,
+      3267.0,
+      3483.0,
+      1326.0,
+      8897.0,
+      2744.0,
+      1506.0,
+      8940.0,
+      3985.0,
+      3966.0,
+      4148.0,
+      4220.0,
+      1823.0,
+      3926.0,
+      2408.0,
+      6733.0,
+      2283.0,
+      2476.0,
+      7048.0,
+      3745.0,
+      3267.0,
+      7978.0,
+      1823.0,
+      3008.0,
+      2347.0,
+      2571.0,
+      7225.0,
+      2582.0,
+      2347.0,
+      2078.0,
+      2164.0,
+      2858.0,
+      8940.0,
+      1823.0,
+      3008.0,
+      2822.0,
+      5938.0,
+      8940.0,
+      5938.0,
+      3926.0,
+      2582.0,
+      2858.0,
+      3023.0,
+      2619.0,
+      1823.0,
+      3483.0,
+      3966.0
+    ]
+  },
+  "test_results": {
+    "dataset_name": "Test Set (5 scenarios)",
+    "scenarios_file": "../data/phase1b_test.json",
+    "n_episodes": 50,
+    "statistics": {
+      "mean_reward": 1076.8399658203125,
+      "std_reward": 1028.5953369140625,
+      "median_reward": 1101.0,
+      "min_reward": -10.0,
+      "max_reward": 2747.0
+    },
+    "behavioral": {
+      "mean_episode_length": 2.54,
+      "nmap_usage_pct": 21.25984251968504,
+      "action_distribution": {
+        "0": 0,
+        "1": 0,
+        "2": 73,
+        "3": 0,
+        "4": 0,
+        "5": 27,
+        "6": 0,
+        "7": 0,
+        "8": 27
+      }
+    },
+    "scenario_stats": {
+      "phase1b_mixed_custom": {
+        "mean": 2061.0,
+        "std": 0.0,
+        "count": 9
+      },
+      "phase1b_many_nonstandard": {
+        "mean": 2741.625,
+        "std": 14.22091293334961,
+        "count": 8
+      },
+      "phase1b_pure_backend": {
+        "mean": 162.0,
+        "std": 0.0,
+        "count": 15
+      },
+      "phase1b_custom_ports": {
+        "mean": 1101.0,
+        "std": 0.0,
+        "count": 10
+      },
+      "phase1b_single_many": {
+        "mean": -10.0,
+        "std": 0.0,
+        "count": 8
+      }
+    },
+    "all_rewards": [
+      2061.0,
+      2061.0,
+      2747.0,
+      2061.0,
+      162.0,
+      2747.0,
+      2061.0,
+      1101.0,
+      162.0,
+      2747.0,
+      162.0,
+      1101.0,
+      2704.0,
+      -10.0,
+      162.0,
+      -10.0,
+      162.0,
+      2747.0,
+      -10.0,
+      1101.0,
+      162.0,
+      -10.0,
+      -10.0,
+      2061.0,
+      2061.0,
+      1101.0,
+      162.0,
+      1101.0,
+      162.0,
+      2747.0,
+      1101.0,
+      1101.0,
+      1101.0,
+      162.0,
+      2747.0,
+      2747.0,
+      162.0,
+      -10.0,
+      162.0,
+      1101.0,
+      162.0,
+      2061.0,
+      1101.0,
+      2061.0,
+      2061.0,
+      162.0,
+      -10.0,
+      -10.0,
+      162.0,
+      162.0
+    ]
+  },
+  "baseline_stats": {
+    "scenarios_file": "../data/phase1b_train_80_augmented.json",
+    "total_scenarios": 80,
+    "agent": "hardcoded_comprehensive",
+    "runs": 100,
+    "statistics": {
+      "mean_reward": 4129.57,
+      "std_reward": 2238.113769471963,
+      "min_reward": 1506.0,
+      "max_reward": 8940.0,
+      "median_reward": 3066.0,
+      "ci_95_lower": 3690.899701183495,
+      "ci_95_upper": 4568.240298816505
+    },
+    "behavioral": {
+      "mean_episode_length": 3.0,
+      "nmap_usage_pct": 100.0
+    },
+    "all_rewards": [
+      2347.0,
+      7630.0,
+      3745.0,
+      1506.0,
+      7598.0,
+      2619.0,
+      7193.0,
+      2325.0,
+      6793.0,
+      2347.0,
+      7288.0,
+      2325.0,
+      7048.0,
+      2047.0,
+      7228.0,
+      3067.0,
+      8673.0,
+      2067.0,
+      2408.0,
+      2822.0,
+      2283.0,
+      2408.0,
+      2822.0,
+      7690.0,
+      3745.0,
+      8837.0,
+      2028.0,
+      7285.0,
+      7598.0,
+      3008.0,
+      6793.0,
+      3066.0,
+      3527.0,
+      2822.0,
+      7048.0,
+      3008.0,
+      7285.0,
+      2774.0,
+      2774.0,
+      2164.0,
+      2067.0,
+      2408.0,
+      8651.0,
+      2164.0,
+      8940.0,
+      5938.0,
+      2067.0,
+      2752.0,
+      2582.0,
+      3985.0,
+      7288.0,
+      3745.0,
+      3745.0,
+      2325.0,
+      7285.0,
+      1506.0,
+      7193.0,
+      3745.0,
+      2273.0,
+      3066.0,
+      1823.0,
+      2731.0,
+      7193.0,
+      3067.0,
+      3745.0,
+      3267.0,
+      3944.0,
+      2619.0,
+      3008.0,
+      2347.0,
+      2347.0,
+      7225.0,
+      1823.0,
+      2047.0,
+      3007.0,
+      3483.0,
+      4148.0,
+      2282.0,
+      2164.0,
+      2347.0,
+      2822.0,
+      3067.0,
+      3966.0,
+      4220.0,
+      4220.0,
+      2582.0,
+      2822.0,
+      6945.0,
+      3483.0,
+      2273.0,
+      8651.0,
+      3066.0,
+      7288.0,
+      6793.0,
+      7215.0,
+      2709.0,
+      7978.0,
+      2282.0,
+      2347.0,
+      1845.0
+    ]
+  },
+  "timestamp": "2025-11-14T02:35:21.399132"
+}

@@ -1,0 +1,1609 @@
+{
+  "version": "1.0_test",
+  "generated_at": "2025-11-14T00:38:21.101008",
+  "total_scenarios": 25,
+  "purpose": "Evaluation set for V13 vs V16 generalization test",
+  "note": "These scenarios were NOT seen during training",
+  "scenarios": [
+    {
+      "id": "test_infrastructure_1",
+      "name": "Test Infrastructure 1",
+      "description": "Test scenario for infrastructure evaluation",
+      "target": "test1.example.com",
+      "complexity": "medium",
+      "scenario_type": "infrastructure",
+      "metadata": {
+        "total_subdomains": 5,
+        "live_endpoints": 4,
+        "open_ports": 4,
+        "critical_services": 1,
+        "port_list": [
+          22,
+          1433,
+          3306,
+          6379
+        ],
+        "technologies": [
+          "Test",
+          "Service"
+        ],
+        "expected_strategy": "service"
+      },
+      "tool_results": {
+        "subfinder": {
+          "subdomains_found": 5,
+          "reward": 50,
+          "time_cost": 5
+        },
+        "httpx": {
+          "live_endpoints": 4,
+          "status_codes": {
+            "200": 4
+          },
+          "reward": 80,
+          "time_cost": 10
+        },
+        "nmap": {
+          "open_ports": 4,
+          "services_identified": 4,
+          "vulnerabilities": 1,
+          "reward": 400,
+          "time_cost": 30
+        }
+      },
+      "optimal_action_sequence": {
+        "actions": [
+          2,
+          5,
+          8
+        ],
+        "expected_reward": 530,
+        "explanation": "Best: Use nmap",
+        "nmap_mode": "service",
+        "reason": "Test scenario - service strategy"
+      },
+      "rewards": {
+        "optimal": 530,
+        "suboptimal": 180
+      },
+      "baseline_skip_reward": 180,
+      "baseline_nmap_reward": 530
+    },
+    {
+      "id": "test_infrastructure_2",
+      "name": "Test Infrastructure 2",
+      "description": "Test scenario for infrastructure evaluation",
+      "target": "test2.example.com",
+      "complexity": "medium",
+      "scenario_type": "infrastructure",
+      "metadata": {
+        "total_subdomains": 9,
+        "live_endpoints": 8,
+        "open_ports": 4,
+        "critical_services": 1,
+        "port_list": [
+          1433,
+          3306,
+          5432,
+          27017
+        ],
+        "technologies": [
+          "Test",
+          "Service"
+        ],
+        "expected_strategy": "service"
+      },
+      "tool_results": {
+        "subfinder": {
+          "subdomains_found": 9,
+          "reward": 90,
+          "time_cost": 5
+        },
+        "httpx": {
+          "live_endpoints": 8,
+          "status_codes": {
+            "200": 8
+          },
+          "reward": 160,
+          "time_cost": 10
+        },
+        "nmap": {
+          "open_ports": 4,
+          "services_identified": 4,
+          "vulnerabilities": 1,
+          "reward": 400,
+          "time_cost": 30
+        }
+      },
+      "optimal_action_sequence": {
+        "actions": [
+          2,
+          5,
+          8
+        ],
+        "expected_reward": 650,
+        "explanation": "Best: Use nmap",
+        "nmap_mode": "service",
+        "reason": "Test scenario - service strategy"
+      },
+      "rewards": {
+        "optimal": 650,
+        "suboptimal": 300
+      },
+      "baseline_skip_reward": 300,
+      "baseline_nmap_reward": 650
+    },
+    {
+      "id": "test_infrastructure_3",
+      "name": "Test Infrastructure 3",
+      "description": "Test scenario for infrastructure evaluation",
+      "target": "test3.example.com",
+      "complexity": "medium",
+      "scenario_type": "infrastructure",
+      "metadata": {
+        "total_subdomains": 7,
+        "live_endpoints": 7,
+        "open_ports": 4,
+        "critical_services": 1,
+        "port_list": [
+          22,
+          1433,
+          5432,
+          6379
+        ],
+        "technologies": [
+          "Test",
+          "Service"
+        ],
+        "expected_strategy": "service"
+      },
+      "tool_results": {
+        "subfinder": {
+          "subdomains_found": 7,
+          "reward": 70,
+          "time_cost": 5
+        },
+        "httpx": {
+          "live_endpoints": 7,
+          "status_codes": {
+            "200": 7
+          },
+          "reward": 140,
+          "time_cost": 10
+        },
+        "nmap": {
+          "open_ports": 4,
+          "services_identified": 4,
+          "vulnerabilities": 1,
+          "reward": 400,
+          "time_cost": 30
+        }
+      },
+      "optimal_action_sequence": {
+        "actions": [
+          2,
+          5,
+          8
+        ],
+        "expected_reward": 610,
+        "explanation": "Best: Use nmap",
+        "nmap_mode": "service",
+        "reason": "Test scenario - service strategy"
+      },
+      "rewards": {
+        "optimal": 610,
+        "suboptimal": 260
+      },
+      "baseline_skip_reward": 260,
+      "baseline_nmap_reward": 610
+    },
+    {
+      "id": "test_hybrid_4",
+      "name": "Test Hybrid 4",
+      "description": "Test scenario for hybrid evaluation",
+      "target": "test4.example.com",
+      "complexity": "medium",
+      "scenario_type": "hybrid",
+      "metadata": {
+        "total_subdomains": 17,
+        "live_endpoints": 14,
+        "open_ports": 4,
+        "critical_services": 0,
+        "port_list": [
+          22,
+          80,
+          443,
+          3306
+        ],
+        "technologies": [
+          "Test",
+          "Service"
+        ],
+        "expected_strategy": "quick"
+      },
+      "tool_results": {
+        "subfinder": {
+          "subdomains_found": 17,
+          "reward": 170,
+          "time_cost": 5
+        },
+        "httpx": {
+          "live_endpoints": 14,
+          "status_codes": {
+            "200": 14
+          },
+          "reward": 280,
+          "time_cost": 10
+        },
+        "nmap": {
+          "open_ports": 4,
+          "services_identified": 4,
+          "vulnerabilities": 0,
+          "reward": 200,
+          "time_cost": 30
+        }
+      },
+      "optimal_action_sequence": {
+        "actions": [
+          2,
+          5,
+          8
+        ],
+        "expected_reward": 650,
+        "explanation": "Best: Use nmap",
+        "nmap_mode": "quick",
+        "reason": "Test scenario - quick strategy"
+      },
+      "rewards": {
+        "optimal": 650,
+        "suboptimal": 500
+      },
+      "baseline_skip_reward": 500,
+      "baseline_nmap_reward": 650
+    },
+    {
+      "id": "test_hybrid_5",
+      "name": "Test Hybrid 5",
+      "description": "Test scenario for hybrid evaluation",
+      "target": "test5.example.com",
+      "complexity": "medium",
+      "scenario_type": "hybrid",
+      "metadata": {
+        "total_subdomains": 16,
+        "live_endpoints": 9,
+        "open_ports": 4,
+        "critical_services": 0,
+        "port_list": [
+          22,
+          80,
+          443,
+          8080
+        ],
+        "technologies": [
+          "Test",
+          "Service"
+        ],
+        "expected_strategy": "quick"
+      },
+      "tool_results": {
+        "subfinder": {
+          "subdomains_found": 16,
+          "reward": 160,
+          "time_cost": 5
+        },
+        "httpx": {
+          "live_endpoints": 9,
+          "status_codes": {
+            "200": 9
+          },
+          "reward": 180,
+          "time_cost": 10
+        },
+        "nmap": {
+          "open_ports": 4,
+          "services_identified": 4,
+          "vulnerabilities": 0,
+          "reward": 200,
+          "time_cost": 30
+        }
+      },
+      "optimal_action_sequence": {
+        "actions": [
+          2,
+          5,
+          8
+        ],
+        "expected_reward": 540,
+        "explanation": "Best: Use nmap",
+        "nmap_mode": "quick",
+        "reason": "Test scenario - quick strategy"
+      },
+      "rewards": {
+        "optimal": 540,
+        "suboptimal": 390
+      },
+      "baseline_skip_reward": 390,
+      "baseline_nmap_reward": 540
+    },
+    {
+      "id": "test_web_only_6",
+      "name": "Test Web Only 6",
+      "description": "Test scenario for web_only evaluation",
+      "target": "test6.example.com",
+      "complexity": "medium",
+      "scenario_type": "web_only",
+      "metadata": {
+        "total_subdomains": 21,
+        "live_endpoints": 14,
+        "open_ports": 4,
+        "critical_services": 0,
+        "port_list": [
+          80,
+          443,
+          8080,
+          8443
+        ],
+        "technologies": [
+          "Test",
+          "Service"
+        ],
+        "expected_strategy": "skip"
+      },
+      "tool_results": {
+        "subfinder": {
+          "subdomains_found": 21,
+          "reward": 210,
+          "time_cost": 5
+        },
+        "httpx": {
+          "live_endpoints": 14,
+          "status_codes": {
+            "200": 14
+          },
+          "reward": 280,
+          "time_cost": 10
+        },
+        "nmap": {
+          "open_ports": 4,
+          "services_identified": 0,
+          "vulnerabilities": 0,
+          "reward": 40,
+          "time_cost": 30
+        }
+      },
+      "optimal_action_sequence": {
+        "actions": [
+          2,
+          5,
+          9
+        ],
+        "expected_reward": 540,
+        "explanation": "Best: Skip nmap",
+        "nmap_mode": "skip",
+        "reason": "Test scenario - skip strategy"
+      },
+      "rewards": {
+        "optimal": 540,
+        "suboptimal": 530
+      },
+      "baseline_skip_reward": 540,
+      "baseline_nmap_reward": 530
+    },
+    {
+      "id": "test_web_only_7",
+      "name": "Test Web Only 7",
+      "description": "Test scenario for web_only evaluation",
+      "target": "test7.example.com",
+      "complexity": "medium",
+      "scenario_type": "web_only",
+      "metadata": {
+        "total_subdomains": 16,
+        "live_endpoints": 17,
+        "open_ports": 4,
+        "critical_services": 0,
+        "port_list": [
+          80,
+          3000,
+          8080,
+          8443
+        ],
+        "technologies": [
+          "Test",
+          "Service"
+        ],
+        "expected_strategy": "skip"
+      },
+      "tool_results": {
+        "subfinder": {
+          "subdomains_found": 16,
+          "reward": 160,
+          "time_cost": 5
+        },
+        "httpx": {
+          "live_endpoints": 17,
+          "status_codes": {
+            "200": 17
+          },
+          "reward": 340,
+          "time_cost": 10
+        },
+        "nmap": {
+          "open_ports": 4,
+          "services_identified": 0,
+          "vulnerabilities": 0,
+          "reward": 40,
+          "time_cost": 30
+        }
+      },
+      "optimal_action_sequence": {
+        "actions": [
+          2,
+          5,
+          9
+        ],
+        "expected_reward": 550,
+        "explanation": "Best: Skip nmap",
+        "nmap_mode": "skip",
+        "reason": "Test scenario - skip strategy"
+      },
+      "rewards": {
+        "optimal": 550,
+        "suboptimal": 540
+      },
+      "baseline_skip_reward": 550,
+      "baseline_nmap_reward": 540
+    },
+    {
+      "id": "test_infrastructure_8",
+      "name": "Test Infrastructure 8",
+      "description": "Test scenario for infrastructure evaluation",
+      "target": "test8.example.com",
+      "complexity": "medium",
+      "scenario_type": "infrastructure",
+      "metadata": {
+        "total_subdomains": 10,
+        "live_endpoints": 6,
+        "open_ports": 4,
+        "critical_services": 1,
+        "port_list": [
+          22,
+          3306,
+          5432,
+          27017
+        ],
+        "technologies": [
+          "Test",
+          "Service"
+        ],
+        "expected_strategy": "service"
+      },
+      "tool_results": {
+        "subfinder": {
+          "subdomains_found": 10,
+          "reward": 100,
+          "time_cost": 5
+        },
+        "httpx": {
+          "live_endpoints": 6,
+          "status_codes": {
+            "200": 6
+          },
+          "reward": 120,
+          "time_cost": 10
+        },
+        "nmap": {
+          "open_ports": 4,
+          "services_identified": 4,
+          "vulnerabilities": 1,
+          "reward": 400,
+          "time_cost": 30
+        }
+      },
+      "optimal_action_sequence": {
+        "actions": [
+          2,
+          5,
+          8
+        ],
+        "expected_reward": 620,
+        "explanation": "Best: Use nmap",
+        "nmap_mode": "service",
+        "reason": "Test scenario - service strategy"
+      },
+      "rewards": {
+        "optimal": 620,
+        "suboptimal": 270
+      },
+      "baseline_skip_reward": 270,
+      "baseline_nmap_reward": 620
+    },
+    {
+      "id": "test_infrastructure_9",
+      "name": "Test Infrastructure 9",
+      "description": "Test scenario for infrastructure evaluation",
+      "target": "test9.example.com",
+      "complexity": "medium",
+      "scenario_type": "infrastructure",
+      "metadata": {
+        "total_subdomains": 8,
+        "live_endpoints": 3,
+        "open_ports": 4,
+        "critical_services": 1,
+        "port_list": [
+          22,
+          1433,
+          6379,
+          27017
+        ],
+        "technologies": [
+          "Test",
+          "Service"
+        ],
+        "expected_strategy": "service"
+      },
+      "tool_results": {
+        "subfinder": {
+          "subdomains_found": 8,
+          "reward": 80,
+          "time_cost": 5
+        },
+        "httpx": {
+          "live_endpoints": 3,
+          "status_codes": {
+            "200": 3
+          },
+          "reward": 60,
+          "time_cost": 10
+        },
+        "nmap": {
+          "open_ports": 4,
+          "services_identified": 4,
+          "vulnerabilities": 1,
+          "reward": 400,
+          "time_cost": 30
+        }
+      },
+      "optimal_action_sequence": {
+        "actions": [
+          2,
+          5,
+          8
+        ],
+        "expected_reward": 540,
+        "explanation": "Best: Use nmap",
+        "nmap_mode": "service",
+        "reason": "Test scenario - service strategy"
+      },
+      "rewards": {
+        "optimal": 540,
+        "suboptimal": 190
+      },
+      "baseline_skip_reward": 190,
+      "baseline_nmap_reward": 540
+    },
+    {
+      "id": "test_hybrid_10",
+      "name": "Test Hybrid 10",
+      "description": "Test scenario for hybrid evaluation",
+      "target": "test10.example.com",
+      "complexity": "medium",
+      "scenario_type": "hybrid",
+      "metadata": {
+        "total_subdomains": 11,
+        "live_endpoints": 14,
+        "open_ports": 4,
+        "critical_services": 0,
+        "port_list": [
+          22,
+          80,
+          3306,
+          8080
+        ],
+        "technologies": [
+          "Test",
+          "Service"
+        ],
+        "expected_strategy": "quick"
+      },
+      "tool_results": {
+        "subfinder": {
+          "subdomains_found": 11,
+          "reward": 110,
+          "time_cost": 5
+        },
+        "httpx": {
+          "live_endpoints": 14,
+          "status_codes": {
+            "200": 14
+          },
+          "reward": 280,
+          "time_cost": 10
+        },
+        "nmap": {
+          "open_ports": 4,
+          "services_identified": 4,
+          "vulnerabilities": 0,
+          "reward": 200,
+          "time_cost": 30
+        }
+      },
+      "optimal_action_sequence": {
+        "actions": [
+          2,
+          5,
+          8
+        ],
+        "expected_reward": 590,
+        "explanation": "Best: Use nmap",
+        "nmap_mode": "quick",
+        "reason": "Test scenario - quick strategy"
+      },
+      "rewards": {
+        "optimal": 590,
+        "suboptimal": 440
+      },
+      "baseline_skip_reward": 440,
+      "baseline_nmap_reward": 590
+    },
+    {
+      "id": "test_infrastructure_11",
+      "name": "Test Infrastructure 11",
+      "description": "Test scenario for infrastructure evaluation",
+      "target": "test11.example.com",
+      "complexity": "medium",
+      "scenario_type": "infrastructure",
+      "metadata": {
+        "total_subdomains": 12,
+        "live_endpoints": 4,
+        "open_ports": 4,
+        "critical_services": 1,
+        "port_list": [
+          1433,
+          3306,
+          6379,
+          27017
+        ],
+        "technologies": [
+          "Test",
+          "Service"
+        ],
+        "expected_strategy": "service"
+      },
+      "tool_results": {
+        "subfinder": {
+          "subdomains_found": 12,
+          "reward": 120,
+          "time_cost": 5
+        },
+        "httpx": {
+          "live_endpoints": 4,
+          "status_codes": {
+            "200": 4
+          },
+          "reward": 80,
+          "time_cost": 10
+        },
+        "nmap": {
+          "open_ports": 4,
+          "services_identified": 4,
+          "vulnerabilities": 1,
+          "reward": 400,
+          "time_cost": 30
+        }
+      },
+      "optimal_action_sequence": {
+        "actions": [
+          2,
+          5,
+          8
+        ],
+        "expected_reward": 600,
+        "explanation": "Best: Use nmap",
+        "nmap_mode": "service",
+        "reason": "Test scenario - service strategy"
+      },
+      "rewards": {
+        "optimal": 600,
+        "suboptimal": 250
+      },
+      "baseline_skip_reward": 250,
+      "baseline_nmap_reward": 600
+    },
+    {
+      "id": "test_infrastructure_12",
+      "name": "Test Infrastructure 12",
+      "description": "Test scenario for infrastructure evaluation",
+      "target": "test12.example.com",
+      "complexity": "medium",
+      "scenario_type": "infrastructure",
+      "metadata": {
+        "total_subdomains": 11,
+        "live_endpoints": 3,
+        "open_ports": 4,
+        "critical_services": 1,
+        "port_list": [
+          1433,
+          3306,
+          6379,
+          27017
+        ],
+        "technologies": [
+          "Test",
+          "Service"
+        ],
+        "expected_strategy": "service"
+      },
+      "tool_results": {
+        "subfinder": {
+          "subdomains_found": 11,
+          "reward": 110,
+          "time_cost": 5
+        },
+        "httpx": {
+          "live_endpoints": 3,
+          "status_codes": {
+            "200": 3
+          },
+          "reward": 60,
+          "time_cost": 10
+        },
+        "nmap": {
+          "open_ports": 4,
+          "services_identified": 4,
+          "vulnerabilities": 1,
+          "reward": 400,
+          "time_cost": 30
+        }
+      },
+      "optimal_action_sequence": {
+        "actions": [
+          2,
+          5,
+          8
+        ],
+        "expected_reward": 570,
+        "explanation": "Best: Use nmap",
+        "nmap_mode": "service",
+        "reason": "Test scenario - service strategy"
+      },
+      "rewards": {
+        "optimal": 570,
+        "suboptimal": 220
+      },
+      "baseline_skip_reward": 220,
+      "baseline_nmap_reward": 570
+    },
+    {
+      "id": "test_web_only_13",
+      "name": "Test Web Only 13",
+      "description": "Test scenario for web_only evaluation",
+      "target": "test13.example.com",
+      "complexity": "medium",
+      "scenario_type": "web_only",
+      "metadata": {
+        "total_subdomains": 18,
+        "live_endpoints": 12,
+        "open_ports": 4,
+        "critical_services": 0,
+        "port_list": [
+          80,
+          3000,
+          8080,
+          8443
+        ],
+        "technologies": [
+          "Test",
+          "Service"
+        ],
+        "expected_strategy": "skip"
+      },
+      "tool_results": {
+        "subfinder": {
+          "subdomains_found": 18,
+          "reward": 180,
+          "time_cost": 5
+        },
+        "httpx": {
+          "live_endpoints": 12,
+          "status_codes": {
+            "200": 12
+          },
+          "reward": 240,
+          "time_cost": 10
+        },
+        "nmap": {
+          "open_ports": 4,
+          "services_identified": 0,
+          "vulnerabilities": 0,
+          "reward": 40,
+          "time_cost": 30
+        }
+      },
+      "optimal_action_sequence": {
+        "actions": [
+          2,
+          5,
+          9
+        ],
+        "expected_reward": 470,
+        "explanation": "Best: Skip nmap",
+        "nmap_mode": "skip",
+        "reason": "Test scenario - skip strategy"
+      },
+      "rewards": {
+        "optimal": 470,
+        "suboptimal": 460
+      },
+      "baseline_skip_reward": 470,
+      "baseline_nmap_reward": 460
+    },
+    {
+      "id": "test_infrastructure_14",
+      "name": "Test Infrastructure 14",
+      "description": "Test scenario for infrastructure evaluation",
+      "target": "test14.example.com",
+      "complexity": "medium",
+      "scenario_type": "infrastructure",
+      "metadata": {
+        "total_subdomains": 8,
+        "live_endpoints": 7,
+        "open_ports": 4,
+        "critical_services": 1,
+        "port_list": [
+          3306,
+          5432,
+          6379,
+          27017
+        ],
+        "technologies": [
+          "Test",
+          "Service"
+        ],
+        "expected_strategy": "service"
+      },
+      "tool_results": {
+        "subfinder": {
+          "subdomains_found": 8,
+          "reward": 80,
+          "time_cost": 5
+        },
+        "httpx": {
+          "live_endpoints": 7,
+          "status_codes": {
+            "200": 7
+          },
+          "reward": 140,
+          "time_cost": 10
+        },
+        "nmap": {
+          "open_ports": 4,
+          "services_identified": 4,
+          "vulnerabilities": 1,
+          "reward": 400,
+          "time_cost": 30
+        }
+      },
+      "optimal_action_sequence": {
+        "actions": [
+          2,
+          5,
+          8
+        ],
+        "expected_reward": 620,
+        "explanation": "Best: Use nmap",
+        "nmap_mode": "service",
+        "reason": "Test scenario - service strategy"
+      },
+      "rewards": {
+        "optimal": 620,
+        "suboptimal": 270
+      },
+      "baseline_skip_reward": 270,
+      "baseline_nmap_reward": 620
+    },
+    {
+      "id": "test_hybrid_15",
+      "name": "Test Hybrid 15",
+      "description": "Test scenario for hybrid evaluation",
+      "target": "test15.example.com",
+      "complexity": "medium",
+      "scenario_type": "hybrid",
+      "metadata": {
+        "total_subdomains": 11,
+        "live_endpoints": 9,
+        "open_ports": 4,
+        "critical_services": 0,
+        "port_list": [
+          22,
+          80,
+          443,
+          8080
+        ],
+        "technologies": [
+          "Test",
+          "Service"
+        ],
+        "expected_strategy": "quick"
+      },
+      "tool_results": {
+        "subfinder": {
+          "subdomains_found": 11,
+          "reward": 110,
+          "time_cost": 5
+        },
+        "httpx": {
+          "live_endpoints": 9,
+          "status_codes": {
+            "200": 9
+          },
+          "reward": 180,
+          "time_cost": 10
+        },
+        "nmap": {
+          "open_ports": 4,
+          "services_identified": 4,
+          "vulnerabilities": 0,
+          "reward": 200,
+          "time_cost": 30
+        }
+      },
+      "optimal_action_sequence": {
+        "actions": [
+          2,
+          5,
+          8
+        ],
+        "expected_reward": 490,
+        "explanation": "Best: Use nmap",
+        "nmap_mode": "quick",
+        "reason": "Test scenario - quick strategy"
+      },
+      "rewards": {
+        "optimal": 490,
+        "suboptimal": 340
+      },
+      "baseline_skip_reward": 340,
+      "baseline_nmap_reward": 490
+    },
+    {
+      "id": "test_infrastructure_16",
+      "name": "Test Infrastructure 16",
+      "description": "Test scenario for infrastructure evaluation",
+      "target": "test16.example.com",
+      "complexity": "medium",
+      "scenario_type": "infrastructure",
+      "metadata": {
+        "total_subdomains": 7,
+        "live_endpoints": 5,
+        "open_ports": 4,
+        "critical_services": 1,
+        "port_list": [
+          22,
+          1433,
+          5432,
+          27017
+        ],
+        "technologies": [
+          "Test",
+          "Service"
+        ],
+        "expected_strategy": "service"
+      },
+      "tool_results": {
+        "subfinder": {
+          "subdomains_found": 7,
+          "reward": 70,
+          "time_cost": 5
+        },
+        "httpx": {
+          "live_endpoints": 5,
+          "status_codes": {
+            "200": 5
+          },
+          "reward": 100,
+          "time_cost": 10
+        },
+        "nmap": {
+          "open_ports": 4,
+          "services_identified": 4,
+          "vulnerabilities": 1,
+          "reward": 400,
+          "time_cost": 30
+        }
+      },
+      "optimal_action_sequence": {
+        "actions": [
+          2,
+          5,
+          8
+        ],
+        "expected_reward": 570,
+        "explanation": "Best: Use nmap",
+        "nmap_mode": "service",
+        "reason": "Test scenario - service strategy"
+      },
+      "rewards": {
+        "optimal": 570,
+        "suboptimal": 220
+      },
+      "baseline_skip_reward": 220,
+      "baseline_nmap_reward": 570
+    },
+    {
+      "id": "test_web_only_17",
+      "name": "Test Web Only 17",
+      "description": "Test scenario for web_only evaluation",
+      "target": "test17.example.com",
+      "complexity": "medium",
+      "scenario_type": "web_only",
+      "metadata": {
+        "total_subdomains": 21,
+        "live_endpoints": 16,
+        "open_ports": 4,
+        "critical_services": 0,
+        "port_list": [
+          80,
+          443,
+          3000,
+          8080
+        ],
+        "technologies": [
+          "Test",
+          "Service"
+        ],
+        "expected_strategy": "skip"
+      },
+      "tool_results": {
+        "subfinder": {
+          "subdomains_found": 21,
+          "reward": 210,
+          "time_cost": 5
+        },
+        "httpx": {
+          "live_endpoints": 16,
+          "status_codes": {
+            "200": 16
+          },
+          "reward": 320,
+          "time_cost": 10
+        },
+        "nmap": {
+          "open_ports": 4,
+          "services_identified": 0,
+          "vulnerabilities": 0,
+          "reward": 40,
+          "time_cost": 30
+        }
+      },
+      "optimal_action_sequence": {
+        "actions": [
+          2,
+          5,
+          9
+        ],
+        "expected_reward": 580,
+        "explanation": "Best: Skip nmap",
+        "nmap_mode": "skip",
+        "reason": "Test scenario - skip strategy"
+      },
+      "rewards": {
+        "optimal": 580,
+        "suboptimal": 570
+      },
+      "baseline_skip_reward": 580,
+      "baseline_nmap_reward": 570
+    },
+    {
+      "id": "test_edge_case_18",
+      "name": "Test Edge Case 18",
+      "description": "Test scenario for edge_case evaluation",
+      "target": "test18.example.com",
+      "complexity": "medium",
+      "scenario_type": "edge_case",
+      "metadata": {
+        "total_subdomains": 20,
+        "live_endpoints": 7,
+        "open_ports": 4,
+        "critical_services": 0,
+        "port_list": [
+          4842,
+          5266,
+          7329,
+          9084
+        ],
+        "technologies": [
+          "Test",
+          "Service"
+        ],
+        "expected_strategy": "service"
+      },
+      "tool_results": {
+        "subfinder": {
+          "subdomains_found": 20,
+          "reward": 200,
+          "time_cost": 5
+        },
+        "httpx": {
+          "live_endpoints": 7,
+          "status_codes": {
+            "200": 7
+          },
+          "reward": 140,
+          "time_cost": 10
+        },
+        "nmap": {
+          "open_ports": 4,
+          "services_identified": 4,
+          "vulnerabilities": 0,
+          "reward": 400,
+          "time_cost": 30
+        }
+      },
+      "optimal_action_sequence": {
+        "actions": [
+          2,
+          5,
+          8
+        ],
+        "expected_reward": 740,
+        "explanation": "Best: Use nmap",
+        "nmap_mode": "service",
+        "reason": "Test scenario - service strategy"
+      },
+      "rewards": {
+        "optimal": 740,
+        "suboptimal": 390
+      },
+      "baseline_skip_reward": 390,
+      "baseline_nmap_reward": 740
+    },
+    {
+      "id": "test_web_only_19",
+      "name": "Test Web Only 19",
+      "description": "Test scenario for web_only evaluation",
+      "target": "test19.example.com",
+      "complexity": "medium",
+      "scenario_type": "web_only",
+      "metadata": {
+        "total_subdomains": 25,
+        "live_endpoints": 15,
+        "open_ports": 4,
+        "critical_services": 0,
+        "port_list": [
+          443,
+          3000,
+          8080,
+          8443
+        ],
+        "technologies": [
+          "Test",
+          "Service"
+        ],
+        "expected_strategy": "skip"
+      },
+      "tool_results": {
+        "subfinder": {
+          "subdomains_found": 25,
+          "reward": 250,
+          "time_cost": 5
+        },
+        "httpx": {
+          "live_endpoints": 15,
+          "status_codes": {
+            "200": 15
+          },
+          "reward": 300,
+          "time_cost": 10
+        },
+        "nmap": {
+          "open_ports": 4,
+          "services_identified": 0,
+          "vulnerabilities": 0,
+          "reward": 40,
+          "time_cost": 30
+        }
+      },
+      "optimal_action_sequence": {
+        "actions": [
+          2,
+          5,
+          9
+        ],
+        "expected_reward": 600,
+        "explanation": "Best: Skip nmap",
+        "nmap_mode": "skip",
+        "reason": "Test scenario - skip strategy"
+      },
+      "rewards": {
+        "optimal": 600,
+        "suboptimal": 590
+      },
+      "baseline_skip_reward": 600,
+      "baseline_nmap_reward": 590
+    },
+    {
+      "id": "test_edge_case_20",
+      "name": "Test Edge Case 20",
+      "description": "Test scenario for edge_case evaluation",
+      "target": "test20.example.com",
+      "complexity": "medium",
+      "scenario_type": "edge_case",
+      "metadata": {
+        "total_subdomains": 17,
+        "live_endpoints": 11,
+        "open_ports": 4,
+        "critical_services": 0,
+        "port_list": [
+          4944,
+          5462,
+          6712,
+          8756
+        ],
+        "technologies": [
+          "Test",
+          "Service"
+        ],
+        "expected_strategy": "service"
+      },
+      "tool_results": {
+        "subfinder": {
+          "subdomains_found": 17,
+          "reward": 170,
+          "time_cost": 5
+        },
+        "httpx": {
+          "live_endpoints": 11,
+          "status_codes": {
+            "200": 11
+          },
+          "reward": 220,
+          "time_cost": 10
+        },
+        "nmap": {
+          "open_ports": 4,
+          "services_identified": 4,
+          "vulnerabilities": 0,
+          "reward": 400,
+          "time_cost": 30
+        }
+      },
+      "optimal_action_sequence": {
+        "actions": [
+          2,
+          5,
+          8
+        ],
+        "expected_reward": 790,
+        "explanation": "Best: Use nmap",
+        "nmap_mode": "service",
+        "reason": "Test scenario - service strategy"
+      },
+      "rewards": {
+        "optimal": 790,
+        "suboptimal": 440
+      },
+      "baseline_skip_reward": 440,
+      "baseline_nmap_reward": 790
+    },
+    {
+      "id": "test_web_only_21",
+      "name": "Test Web Only 21",
+      "description": "Test scenario for web_only evaluation",
+      "target": "test21.example.com",
+      "complexity": "medium",
+      "scenario_type": "web_only",
+      "metadata": {
+        "total_subdomains": 24,
+        "live_endpoints": 15,
+        "open_ports": 4,
+        "critical_services": 0,
+        "port_list": [
+          80,
+          443,
+          3000,
+          8080
+        ],
+        "technologies": [
+          "Test",
+          "Service"
+        ],
+        "expected_strategy": "skip"
+      },
+      "tool_results": {
+        "subfinder": {
+          "subdomains_found": 24,
+          "reward": 240,
+          "time_cost": 5
+        },
+        "httpx": {
+          "live_endpoints": 15,
+          "status_codes": {
+            "200": 15
+          },
+          "reward": 300,
+          "time_cost": 10
+        },
+        "nmap": {
+          "open_ports": 4,
+          "services_identified": 0,
+          "vulnerabilities": 0,
+          "reward": 40,
+          "time_cost": 30
+        }
+      },
+      "optimal_action_sequence": {
+        "actions": [
+          2,
+          5,
+          9
+        ],
+        "expected_reward": 590,
+        "explanation": "Best: Skip nmap",
+        "nmap_mode": "skip",
+        "reason": "Test scenario - skip strategy"
+      },
+      "rewards": {
+        "optimal": 590,
+        "suboptimal": 580
+      },
+      "baseline_skip_reward": 590,
+      "baseline_nmap_reward": 580
+    },
+    {
+      "id": "test_infrastructure_22",
+      "name": "Test Infrastructure 22",
+      "description": "Test scenario for infrastructure evaluation",
+      "target": "test22.example.com",
+      "complexity": "medium",
+      "scenario_type": "infrastructure",
+      "metadata": {
+        "total_subdomains": 10,
+        "live_endpoints": 6,
+        "open_ports": 4,
+        "critical_services": 1,
+        "port_list": [
+          22,
+          1433,
+          5432,
+          27017
+        ],
+        "technologies": [
+          "Test",
+          "Service"
+        ],
+        "expected_strategy": "service"
+      },
+      "tool_results": {
+        "subfinder": {
+          "subdomains_found": 10,
+          "reward": 100,
+          "time_cost": 5
+        },
+        "httpx": {
+          "live_endpoints": 6,
+          "status_codes": {
+            "200": 6
+          },
+          "reward": 120,
+          "time_cost": 10
+        },
+        "nmap": {
+          "open_ports": 4,
+          "services_identified": 4,
+          "vulnerabilities": 1,
+          "reward": 400,
+          "time_cost": 30
+        }
+      },
+      "optimal_action_sequence": {
+        "actions": [
+          2,
+          5,
+          8
+        ],
+        "expected_reward": 620,
+        "explanation": "Best: Use nmap",
+        "nmap_mode": "service",
+        "reason": "Test scenario - service strategy"
+      },
+      "rewards": {
+        "optimal": 620,
+        "suboptimal": 270
+      },
+      "baseline_skip_reward": 270,
+      "baseline_nmap_reward": 620
+    },
+    {
+      "id": "test_web_only_23",
+      "name": "Test Web Only 23",
+      "description": "Test scenario for web_only evaluation",
+      "target": "test23.example.com",
+      "complexity": "medium",
+      "scenario_type": "web_only",
+      "metadata": {
+        "total_subdomains": 21,
+        "live_endpoints": 17,
+        "open_ports": 4,
+        "critical_services": 0,
+        "port_list": [
+          80,
+          443,
+          8080,
+          8443
+        ],
+        "technologies": [
+          "Test",
+          "Service"
+        ],
+        "expected_strategy": "skip"
+      },
+      "tool_results": {
+        "subfinder": {
+          "subdomains_found": 21,
+          "reward": 210,
+          "time_cost": 5
+        },
+        "httpx": {
+          "live_endpoints": 17,
+          "status_codes": {
+            "200": 17
+          },
+          "reward": 340,
+          "time_cost": 10
+        },
+        "nmap": {
+          "open_ports": 4,
+          "services_identified": 0,
+          "vulnerabilities": 0,
+          "reward": 40,
+          "time_cost": 30
+        }
+      },
+      "optimal_action_sequence": {
+        "actions": [
+          2,
+          5,
+          9
+        ],
+        "expected_reward": 600,
+        "explanation": "Best: Skip nmap",
+        "nmap_mode": "skip",
+        "reason": "Test scenario - skip strategy"
+      },
+      "rewards": {
+        "optimal": 600,
+        "suboptimal": 590
+      },
+      "baseline_skip_reward": 600,
+      "baseline_nmap_reward": 590
+    },
+    {
+      "id": "test_web_only_24",
+      "name": "Test Web Only 24",
+      "description": "Test scenario for web_only evaluation",
+      "target": "test24.example.com",
+      "complexity": "medium",
+      "scenario_type": "web_only",
+      "metadata": {
+        "total_subdomains": 15,
+        "live_endpoints": 12,
+        "open_ports": 4,
+        "critical_services": 0,
+        "port_list": [
+          80,
+          443,
+          3000,
+          8443
+        ],
+        "technologies": [
+          "Test",
+          "Service"
+        ],
+        "expected_strategy": "skip"
+      },
+      "tool_results": {
+        "subfinder": {
+          "subdomains_found": 15,
+          "reward": 150,
+          "time_cost": 5
+        },
+        "httpx": {
+          "live_endpoints": 12,
+          "status_codes": {
+            "200": 12
+          },
+          "reward": 240,
+          "time_cost": 10
+        },
+        "nmap": {
+          "open_ports": 4,
+          "services_identified": 0,
+          "vulnerabilities": 0,
+          "reward": 40,
+          "time_cost": 30
+        }
+      },
+      "optimal_action_sequence": {
+        "actions": [
+          2,
+          5,
+          9
+        ],
+        "expected_reward": 440,
+        "explanation": "Best: Skip nmap",
+        "nmap_mode": "skip",
+        "reason": "Test scenario - skip strategy"
+      },
+      "rewards": {
+        "optimal": 440,
+        "suboptimal": 430
+      },
+      "baseline_skip_reward": 440,
+      "baseline_nmap_reward": 430
+    },
+    {
+      "id": "test_hybrid_25",
+      "name": "Test Hybrid 25",
+      "description": "Test scenario for hybrid evaluation",
+      "target": "test25.example.com",
+      "complexity": "medium",
+      "scenario_type": "hybrid",
+      "metadata": {
+        "total_subdomains": 18,
+        "live_endpoints": 11,
+        "open_ports": 4,
+        "critical_services": 0,
+        "port_list": [
+          22,
+          443,
+          3306,
+          8080
+        ],
+        "technologies": [
+          "Test",
+          "Service"
+        ],
+        "expected_strategy": "quick"
+      },
+      "tool_results": {
+        "subfinder": {
+          "subdomains_found": 18,
+          "reward": 180,
+          "time_cost": 5
+        },
+        "httpx": {
+          "live_endpoints": 11,
+          "status_codes": {
+            "200": 11
+          },
+          "reward": 220,
+          "time_cost": 10
+        },
+        "nmap": {
+          "open_ports": 4,
+          "services_identified": 4,
+          "vulnerabilities": 0,
+          "reward": 200,
+          "time_cost": 30
+        }
+      },
+      "optimal_action_sequence": {
+        "actions": [
+          2,
+          5,
+          8
+        ],
+        "expected_reward": 600,
+        "explanation": "Best: Use nmap",
+        "nmap_mode": "quick",
+        "reason": "Test scenario - quick strategy"
+      },
+      "rewards": {
+        "optimal": 600,
+        "suboptimal": 450
+      },
+      "baseline_skip_reward": 450,
+      "baseline_nmap_reward": 600
+    }
+  ]
+}

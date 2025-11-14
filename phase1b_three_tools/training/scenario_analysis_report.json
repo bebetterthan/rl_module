@@ -1,0 +1,24 @@
+{
+  "total_scenarios": 20,
+  "size_distribution": {
+    "small": 1,
+    "medium": 14,
+    "large": 5
+  },
+  "type_distribution": {
+    "web_only": 12,
+    "infrastructure": 10,
+    "hybrid": 8,
+    "edge": -10
+  },
+  "unique_port_patterns": 20,
+  "duplicate_patterns": 0,
+  "unique_technologies": 49,
+  "unique_subdomain_names": 43,
+  "strategy_distribution": {},
+  "recommendations": [
+    "\u2705 Port patterns are unique - maintain uniqueness in expansion",
+    "\u26a0\ufe0f  Increase small scenarios: 1 \u2192 25 (in 80-set)",
+    "\u26a0\ufe0f  Add more optimal strategy variety (need skip/quick/service/full balance)"
+  ]
+}
